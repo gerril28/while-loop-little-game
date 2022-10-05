@@ -28,13 +28,15 @@ input.onGesture(Gesture.Shake, function () {
                 basic.clearScreen()
             }
         }
-        Player = game.createSprite(2, 0)
-        Enemy = game.createSprite(randint(0, 4), 1)
-        if (Player.isTouching(Player)) {
-            Enemy.delete()
-            Points = Points + 1
-            basic.showNumber(Points)
-            basic.clearScreen()
+        for (let index = 0; index < 1; index++) {
+            Player = game.createSprite(2, 0)
+            Enemy = game.createSprite(randint(0, 4), 1)
+            if (Player.isTouching(Player)) {
+                Enemy.delete()
+                Points = Points + 1
+                basic.showNumber(Points)
+                basic.clearScreen()
+            }
         }
     }
 })
@@ -44,6 +46,3 @@ let Player: game.LedSprite = null
 Player = game.createSprite(2, 0)
 Enemy = game.createSprite(randint(0, 4), 4)
 Points = 0
-basic.forever(function () {
-	
-})
