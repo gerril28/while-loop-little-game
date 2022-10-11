@@ -1,17 +1,17 @@
+input.onPinPressed(TouchPin.P0, function () {
+    game.resume()
+})
 input.onButtonPressed(Button.A, function () {
     Player.change(LedSpriteProperty.X, -1)
 })
 input.onPinPressed(TouchPin.P2, function () {
     basic.showNumber(Points)
-    game.resume()
 })
 input.onButtonPressed(Button.B, function () {
     Player.change(LedSpriteProperty.X, 1)
 })
 input.onPinPressed(TouchPin.P1, function () {
     game.pause()
-    basic.pause(100)
-    game.resume()
 })
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 100; index++) {
